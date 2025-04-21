@@ -3,105 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tableau Visualization Showcase</title>
+  <title>Tableau Dashboard Link</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f4f9;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
       color: #333;
-    }
-
-    header {
-      background-color: #4a90e2;
-      color: white;
-      padding: 2rem;
       text-align: center;
+      padding: 50px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    h1 {
+      color: #4a90e2;
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-
-    .description {
-      margin-bottom: 2rem;
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    .buttons {
-      margin-bottom: 2rem;
-    }
-
-    .buttons button {
+    a.dashboard-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
       background-color: #4a90e2;
       color: white;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      margin-right: 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 8px;
       transition: background-color 0.3s;
     }
 
-    .buttons button:hover {
+    a.dashboard-link:hover {
       background-color: #357ab8;
-    }
-
-    iframe {
-      width: 100%;
-      height: 800px;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Interactive Data Dashboard</h1>
-  </header>
+  <h1>View My Tableau Dashboard</h1>
+  <p>Click the button below to open the interactive dashboard in a new tab:</p>
 
-  <div class="container">
-    <div class="description">
-      <p>
-        Welcome to my interactive Tableau dashboard! This visualization provides insights into key data metrics,
-        helping you better understand trends, patterns, and performance. Use the buttons below to explore different views or refresh the visualization.
-      </p>
-    </div>
-
-    <div class="buttons">
-      <button onclick="reloadViz()">🔄 Refresh Visualization</button>
-      <button onclick="scrollToViz()">⬇️ Scroll to Dashboard</button>
-    </div>
-
-    <div id="viz-section">
-      <iframe 
-        src="https://public.tableau.com/views/_17444501704380/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-
-  <script>
-    function reloadViz() {
-      const iframe = document.querySelector('iframe');
-      iframe.src = iframe.src;
-    }
-
-    function scrollToViz() {
-      document.getElementById('viz-section').scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
+  <a
+    class="dashboard-link"
+    href="https://public.tableau.com/views/_17444501704380/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+    target="_blank"
+  >
+    📊 Open Dashboard
+  </a>
 
 </body>
 </html>
